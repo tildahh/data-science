@@ -1,6 +1,4 @@
-# data-science
-
-Data Science Portfolio
+# Data Science Portfolio
 
 Masters in Data Science (in progress - expected Spring 2026)
 
