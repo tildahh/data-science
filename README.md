@@ -1,13 +1,9 @@
-# Data Science Portfolio
-
-Sara (Matilda) Orona
-
-matilda_orona@berkeley.edu
+# UC Berkeley MIDS – Data Science Repository
 
 Masters in Data Science (in progress - expected Spring 2026)
 
-Univeristy of California, Berkeley
-
 Coursework Completed:
+
+contact: matilda_orona@berkeley.edu
 
 
