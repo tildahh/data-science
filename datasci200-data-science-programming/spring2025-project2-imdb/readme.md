@@ -37,7 +37,7 @@ Raw real-world data is rarely analysis ready. We performed extensive preprocessi
 ### 2. Feature Engineering: Certification Consolidation
 Raw real-world data is rarely analysis-ready. We mapped these to a standardized **6-category system** to enable meaningful aggregation.[1]
 
-![cleaning](datasci200-data-science-programming/spring2025-project2-imdb/images/data_cleaning.png)
+![cleaning](images/data_cleaning.png)
 *Figure 1: Overview of the data cleaning pipeline and certification consolidation logic.*
 
 | Original Code | Mapped To | Logic |
@@ -55,13 +55,13 @@ Raw real-world data is rarely analysis-ready. We mapped these to a standardized 
 ### 1. The Revenue Drivers: Genre & Rating
 We hypothesized that "family-friendly" movies earn more. The data confirms this but with nuance. While **R-rated** films have high outlier hits, **G and PG** films have a higher median gross and total cumulative revenue.[2]
 
-![boxplot](datasci200-data-science-programming/spring2025-project2-imdb/images/gross_revenue_by_certificate_plotly.png)
+![boxplot](images/gross_revenue_by_certificate_plotly.png)
 *Figure 2: Boxplot showing the distribution of Gross Revenue across standardized certificates.*
 
 ### 2. Trends Over Time (Inflation Adjusted)
 When adjusted for inflation, the **1970s** emerges as the most profitable decade per film (the "Blockbuster Era"), while the 2010s show a dip in average per-film gross despite high totals, likely due to market saturation.
 
-![inflation](datasci200-data-science-programming/spring2025-project2-imdb/images/avg_gross_cert_adjusted.png)
+![inflation](images/avg_gross_cert_adjusted.png)
 *Figure 3: Average Gross Revenue by Decade, broken down by Certificate.*
 
 ### 3. The "Critical vs. Commercial" Divide
@@ -71,7 +71,7 @@ Who consistently delivers quality?
     *   *Commercial Leaders:* **Anthony Russo** and **James Cameron** (Avg Gross >$350M).[4]
 *   **The "Sweet Spot":** Films rated **8.5–9.0** actually earn *more* on average than films rated >9.0. This suggests that "perfect" movies are often niche art-house films, while "excellent" movies (8.5 range) have broader mass appeal.
 
-![director](datasci200-data-science-programming/spring2025-project2-imdb/images/director_imdb_vs_gross.png)
+![director](images/director_imdb_vs_gross.png)
 *Figure 4: Top 10 Directors by Average IMDB Rating (Left) vs. Average Gross Revenue (Right).*
 
 ### 4. Correlation Analysis
@@ -79,7 +79,7 @@ A heatmap of numerical features reveals:
 *   **Votes vs. Gross (0.55):** Strong positive correlation. Popularity drives box office (or vice versa).
 *   **Rating vs. Gross (0.09):** Surprisingly weak correlation. A movie does not need to be critically perfect to be a financial hit.[5]
 
-![heatmap](datasci200-data-science-programming/spring2025-project2-imdb/images/heatmap.png)
+![heatmap](images/heatmap.png)
 *Figure 5: Pearson correlation matrix of numerical variables.*
 
 ***
