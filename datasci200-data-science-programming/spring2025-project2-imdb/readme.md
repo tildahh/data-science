@@ -30,11 +30,6 @@ The dataset contained 15+ disparate rating codes from various eras (e.g., *Appro
 | `A`, `R`, `16` | **R** | Restricted/Adult |
 | `Approved`, `Passed` | **OldCode** | Pre-1968 Hays Code |
 
-<p align="center">
-  <img src="images/data_cleaning.png" width="800" alt="Data Cleaning Pipeline">
-</p>
-*Figure 1: Overview of the cleaning workflow, reducing 15 raw categories into 6 analytical buckets.*
-
 ### 2. Data Cleaning & Normalization
 *   **Revenue parsing:** Removed non-numeric characters from `Gross` and cast to float.
 *   **Inflation Adjustment:** Normalized revenue data to 2020 USD using CPI metrics to allow for fair comparison between 1930s classics and 2010s blockbusters.
@@ -50,7 +45,7 @@ We hypothesized that "family-friendly" movies earn more. The data confirms this 
 *   **R-rated** films, while critically acclaimed, show a lower median gross, though outliers (e.g., *Joker*) prove that adult themes can still yield massive ROI.
 
 <p align="center">
-  <img src="images/gross_revenue_by_certificate_plotly.png" width="800" alt="Revenue Boxplot">
+  <img src="images/gross_revenue_by_certificate_plotly.png" width="700" alt="Revenue Boxplot">
 </p>
 *Figure 2: Distribution of Gross Revenue by Certificate. Note the higher median stability of G/PG films compared to the high-variance R category.*
 
@@ -59,7 +54,7 @@ When adjusting for inflation, the narrative shifts. While the 2010s boast high *
 *   **The "Sweet Spot":** Films rated **8.5–9.0** consistently out-earn films rated **9.0+**. This suggests that "perfect" movies are often niche art-house films, while "excellent" movies (8.5 range) have broader mass appeal.
 
 <p align="center">
-  <img src="images/avg_gross_cert_adjusted.png" width="800" alt="Inflation Adjusted Revenue">
+  <img src="images/avg_gross_cert_adjusted.png" width="700" alt="Inflation Adjusted Revenue">
 </p>
 *Figure 3: Inflation-Adjusted Average Gross Revenue by Decade. Note the massive spikes in the 1930s (Golden Age) and 1970s (New Hollywood).*
 
@@ -70,7 +65,7 @@ We identified distinct clusters of directors based on their optimization strateg
 *   **The Dual Threats:** **Christopher Nolan** and **Peter Jackson** exist in the rare upper-right quadrant, maximizing both critical and commercial success.
 
 <p align="center">
-  <img src="images/director_imdb_vs_gross.png" width="800" alt="Director Analysis">
+  <img src="images/director_imdb_vs_gross.png" width="700" alt="Director Analysis">
 </p>
 *Figure 4: Bubble chart mapping Directors by Average IMDB Rating (X) vs. Average Gross (Y). Bubble size represents movie count.*
 
@@ -80,7 +75,7 @@ A Pearson correlation analysis reveals:
 *   **Rating vs. Gross (0.09):** Extremely weak correlation. High quality does not guarantee high revenue.
 
 <p align="center">
-  <img src="images/heatmap.png" width="800" alt="Heatmap">
+  <img src="images/heatmap.png" width="700" alt="Heatmap">
 </p>
 *Figure 5: Correlation heatmap of numerical features.*
 
