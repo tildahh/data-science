@@ -1,21 +1,12 @@
 # 🎬 IMDB Top 1000: Critical & Commercial Success Analysis
 
+![Libraries](https://img.shields.io/badge/Libs-Pandas%20%7C%20Se)
   
-
-## 📌 Executive Summary
+## Executive Summary
 This project investigates the dual drivers of cinematic success: **critical acclaim** (IMDB Rating) and **commercial performance** (Gross Revenue). By analyzing the IMDB Top 1000 dataset, we uncovered that **Genre** is the strongest predictor of revenue (with Adventure/Sci-Fi leading), while **Director-Actor collaborations** and **R-ratings** are stronger predictors of critical prestige.
 
 Surprisingly, while G-rated films have the highest *total* lifetime gross, R-rated films achieve the highest average user ratings, challenging the assumption that "family-friendly" always equals "audience favorite".
 
-***
-
-## 📚 Table of Contents
-- [Project Overview](#project-overview)
-- [Tech Stack](#tech-stack)
-- [Data Engineering & Cleaning](#data-engineering--cleaning)
-- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-- [Key Findings](#key-findings)
-- [Limitations](#limitations)
 
 ***
 
@@ -38,14 +29,17 @@ Surprisingly, while G-rated films have the highest *total* lifetime gross, R-rat
 ***
 
 ## ⚙️ Data Engineering & Cleaning
-Raw real-world data is rarely analysis-ready. We performed extensive preprocessing to ensure data integrity.[1]
+Raw real-world data is rarely analysis ready. We performed extensive preprocessing to ensure data integrity.
 
 ### 1. Handling Missing & Corrupt Data
 *   **Revenue Extraction:** The `Gross` column contained non-numeric characters (`,`). We stripped these and converted to float, treating missing values as `NaN` rather than zero to avoid skewing averages.
 *   **Runtime Formatting:** Converted string formats ("142 min") to numeric integers for correlation analysis.
 
 ### 2. Feature Engineering: Certification Consolidation
-The dataset contained 15+ disparate rating codes from various eras and countries (e.g., *Approved*, *GP*, *U/A*). We mapped these to a standardized **6-category system** to enable meaningful aggregation.[1]
+Raw real-world data is rarely analysis-ready. We mapped these to a standardized **6-category system** to enable meaningful aggregation.[1]
+
+![cleaning](../images/data_cleaning.png)
+*Figure 1: Overview of the data cleaning pipeline and certification consolidation logic.*
 
 | Original Code | Mapped To | Logic |
 | :--- | :--- | :--- |
@@ -60,21 +54,34 @@ The dataset contained 15+ disparate rating codes from various eras and countries
 ## 📊 Exploratory Data Analysis (EDA)
 
 ### 1. The Revenue Drivers: Genre & Rating
-We hypothesized that "family-friendly" movies earn more. The data confirms this but with nuance.
-*   **Gross by Certificate:** While **R-rated** films have high outlier hits, **G and PG** films have a higher median gross and total cumulative revenue.[2]
-*   **Inflation Impact:** When adjusted for inflation, the **1970s** emerges as the most profitable decade per film, likely due to the birth of the "blockbuster" era (*Star Wars*, *Jaws*).[3]
+We hypothesized that "family-friendly" movies earn more. The data confirms this but with nuance. While **R-rated** films have high outlier hits, **G and PG** films have a higher median gross and total cumulative revenue.[2]
 
-### 2. The Critical Darlings: Directors & Actors
+![boxplot](/images/gross_revenue_by_certificate_plotly.png)
+*Figure 2: Boxplot showing the distribution of Gross Revenue across standardized certificates.*
+
+### 2. Trends Over Time (Inflation Adjusted)
+When adjusted for inflation, the **1970s** emerges as the most profitable decade per film (the "Blockbuster Era"), while the 2010s show a dip in average per-film gross despite high totals, likely due to market saturation.
+
+![inflation](images/avg_gross_cert_adjusted.png)
+*Figure 3: Average Gross Revenue by Decade, broken down by Certificate.*
+
+### 3. The "Critical vs. Commercial" Divide
 Who consistently delivers quality?
 *   **Directors:** We identified a divergence between "Critical" directors and "Commercial" directors.
     *   *Critical Leaders:* **Frank Darabont** (Avg 8.78) and **Lana Wachowski**.[4]
     *   *Commercial Leaders:* **Anthony Russo** and **James Cameron** (Avg Gross >$350M).[4]
 *   **The "Sweet Spot":** Films rated **8.5–9.0** actually earn *more* on average than films rated >9.0. This suggests that "perfect" movies are often niche art-house films, while "excellent" movies (8.5 range) have broader mass appeal.
 
-### 3. Correlation Analysis
+![director](../images/director_imdb_vs_gross.png)
+*Figure 4: Top 10 Directors by Average IMDB Rating (Left) vs. Average Gross Revenue (Right).*
+
+### 4. Correlation Analysis
 A heatmap of numerical features reveals:
 *   **Votes vs. Gross (0.55):** Strong positive correlation. Popularity drives box office (or vice versa).
 *   **Rating vs. Gross (0.09):** Surprisingly weak correlation. A movie does not need to be critically perfect to be a financial hit.[5]
+
+![heatmap](../images/heatmap.png)
+*Figure 5: Pearson correlation matrix of numerical variables.*
 
 ***
 
