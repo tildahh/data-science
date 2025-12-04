@@ -1,6 +1,4 @@
 # 🎬 IMDB Top 1000: Critical & Commercial Success Analysis
-
-![Libraries](https://img.shields.io/badge/Libs-Pandas%20%7C%20Se)
   
 ## Executive Summary
 This project investigates the dual drivers of cinematic success: **critical acclaim** (IMDB Rating) and **commercial performance** (Gross Revenue). By analyzing the IMDB Top 1000 dataset, we uncovered that **Genre** is the strongest predictor of revenue (with Adventure/Sci-Fi leading), while **Director-Actor collaborations** and **R-ratings** are stronger predictors of critical prestige.
@@ -16,14 +14,6 @@ Surprisingly, while G-rated films have the highest *total* lifetime gross, R-rat
 *   **Observations:** 1,000 top-rated films
 *   **Temporal Range:** 1920 – 2020
 *   **Key Variables:** `IMDB_Rating`, `Gross`, `Certificate`, `Director`, `Star1`, `Genre`
-
-***
-
-## 🛠 Tech Stack
-*   **Python**: Core programming language.
-*   **Pandas**: Data manipulation, type conversion, and missing value handling.
-*   **Seaborn / Matplotlib**: Static statistical visualizations (boxplots, bar charts).
-*   **Plotly**: Interactive visualizations for complex scatters.
 
 ***
 
@@ -105,11 +95,12 @@ A heatmap of numerical features reveals:
 
 *Project for Data Science 200, UC Berkeley.*
 
-[1](datasci200-data-science-programming/spring2025-project2-imdb/images/data_cleaning.png)
-[2](datasci200-data-science-programming/spring2025-project2-imdb/images/gross_revenue_by_certificate_plotly.png)
-[3](datasci200-data-science-programming/spring2025-project2-imdb/images/avg_gross_cert_adjusted.png)
-[4](datasci200-data-science-programming/spring2025-project2-imdb/images/director_imdb_vs_gross.png)
-[5](datasci200-data-science-programming/spring2025-project2-imdb/images/heatmap.png)
+***
 
+## 🛠 Tech Stack
+*   **Python**: Core programming language.
+*   **Pandas**: Data manipulation, type conversion, and missing value handling.
+*   **Seaborn / Matplotlib**: Static statistical visualizations (boxplots, bar charts).
+*   **Plotly**: Interactive visualizations for complex scatters.
 
 
