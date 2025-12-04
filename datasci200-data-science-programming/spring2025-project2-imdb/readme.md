@@ -47,7 +47,8 @@ We hypothesized that "family-friendly" movies earn more. The data confirms this 
 <p align="center">
   <img src="images/gross_revenue_by_certificate_plotly.png" width="700" alt="Revenue Boxplot">
 </p>
-*Figure 2: Distribution of Gross Revenue by Certificate. Note the higher median stability of G/PG films compared to the high-variance R category.*
+
+*Figure 1: Distribution of Gross Revenue by Certificate. Note the higher median stability of G/PG films compared to the high-variance R category.*
 
 ### 2. Temporal Trends (Inflation Adjusted)
 When adjusting for inflation, the narrative shifts. While the 2010s boast high *total* revenue due to franchise volume, the **1970s** emerges as the most efficient decade per film.
@@ -56,7 +57,8 @@ When adjusting for inflation, the narrative shifts. While the 2010s boast high *
 <p align="center">
   <img src="images/avg_gross_cert_adjusted.png" width="700" alt="Inflation Adjusted Revenue">
 </p>
-*Figure 3: Inflation-Adjusted Average Gross Revenue by Decade. Note the massive spikes in the 1930s (Golden Age) and 1970s (New Hollywood).*
+
+*Figure 2: Inflation-Adjusted Average Gross Revenue by Decade. Note the massive spikes in the 1930s (Golden Age) and 1970s (New Hollywood).*
 
 ### 3. The Director's Dilemma: Critical vs. Commercial
 We identified distinct clusters of directors based on their optimization strategy:
@@ -67,7 +69,8 @@ We identified distinct clusters of directors based on their optimization strateg
 <p align="center">
   <img src="images/director_imdb_vs_gross.png" width="700" alt="Director Analysis">
 </p>
-*Figure 4: Bubble chart mapping Directors by Average IMDB Rating (X) vs. Average Gross (Y). Bubble size represents movie count.*
+
+*Figure 3: Bubble chart mapping Directors by Average IMDB Rating (X) vs. Average Gross (Y). Bubble size represents movie count.*
 
 ### 4. Correlation Matrix
 A Pearson correlation analysis reveals:
@@ -77,7 +80,8 @@ A Pearson correlation analysis reveals:
 <p align="center">
   <img src="images/heatmap.png" width="700" alt="Heatmap">
 </p>
-*Figure 5: Correlation heatmap of numerical features.*
+
+*Figure 4: Correlation heatmap of numerical features.*
 
 ---
 
