@@ -27,9 +27,6 @@ Raw real-world data is rarely analysis ready. We performed extensive preprocessi
 ### 2. Feature Engineering: Certification Consolidation
 Raw real-world data is rarely analysis-ready. We mapped these to a standardized **6-category system** to enable meaningful aggregation.[1]
 
-![cleaning](images/data_cleaning.png)
-*Figure 1: Overview of the data cleaning pipeline and certification consolidation logic.*
-
 | Original Code | Mapped To | Logic |
 | :--- | :--- | :--- |
 | `U`, `G` | **G** | General Audiences |
@@ -37,6 +34,9 @@ Raw real-world data is rarely analysis-ready. We mapped these to a standardized 
 | `PG-13` | **PG-13** | Modern Teen Demographic |
 | `A`, `R`, `16` | **R** | Restricted/Adult |
 | `Approved`, `Passed` | **OldCode** | Pre-1968 Hays Code |
+
+![cleaning](images/data_cleaning.png)
+*Figure 1: Overview of the data cleaning pipeline and certification consolidation logic.*
 
 ***
 
